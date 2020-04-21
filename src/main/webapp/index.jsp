@@ -5,8 +5,8 @@
 <%
     // setup the connection and execute the query
     Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/moviedbexample?useSSL=false",
-            "mytestuser", "mypassword");
+    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/moviedb?useSSL=false&allowPublicKeyRetrieval=true",
+            "yourusername", "yourpassword");
     Statement select = connection.createStatement();
     ResultSet result = select.executeQuery("Select * from stars limit 20");
     ResultSetMetaData metadata = result.getMetaData();
